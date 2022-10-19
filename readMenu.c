@@ -22,7 +22,7 @@ bool checkAddOn(Products *item){
  */
 int readMenuFile(Products *item) {
     FILE *pfile;
-    pfile = fopen("POS.data", "r");
+    pfile = fopen("../POS.data", "r");
     char buffer[MAX_CHARA];
     char wordTemp[MAX_CHARA];
     int tempCount = 0;

@@ -51,8 +51,6 @@ void checkMenu(char *pinput, Products *item, float *pTotal, int len, bool *tags)
             item->qty = qty;
             *pTotal += item->price*qty;
 
-            printf("A");
-
             if(checkAddOn(item)){
 
                 getchar(); //clears input buffer

@@ -83,12 +83,17 @@ void displayReceipt(Products *item, int len, float total, float change, float pa
         
         //checks if there are any addons
         if(checkAddOn(item)) {
+        	bool isIncluded = false;
             for (int j = 0; j < 3; j++) { 
                 if(item->addOn[j].isIncluded){
-                    printf("%d\t%.2f",item->qty, (item->price+item->addOn[j].price)*item->qty);
-                    printf("\n\t\t\t\t\t%s\t%.2f", item->addOn[j].name,item->addOn[j].price);
-                }   
-            }    
+                    printf("%d\t%.2f*",item->qty,(item->price)*item->qty);
+                    printf("\n\t\t\t\t\t+%s\t%.2f", item->addOn[j].name,item->addOn[j].price*item->qty);
+                    printf("\n\t\t\t\t\t\t\t\t\t%.2f",(item->price+item->addOn[j].price)*item->qty);
+    				isIncluded = true;
+                }
+            }
+            if(!isIncluded)
+				printf("%d\t%.2f",item->qty, item->price);    
         } else {
             printf("%d\t%.2f",item->qty, item->price);
         }
@@ -113,7 +118,12 @@ void displayAddOns(Products *item) {
     displayCenterTitle("\nPlease select and Add on: \n");
 
     for (int i =0; i < 3; i++) {
-        printf("\t\t\t\t[%d]\t%s\t%.2f\n",i, item->addOn[i].name, item->addOn[i].price);
+        printf("\t\t\t\t[%d]\t%s",i, item->addOn[i].name);
+        //adds whitespaces
+        for(int k = 0; k < MAX_MENU_CHARA-strlen(item->addOn[i].name) ; k++) {
+			printf(" ");
+		} 
+		printf("%.2f\n",item->addOn[i].price);
     }
 
     displayBorder(SCREEN_WIDTH,'_');
