@@ -4,7 +4,7 @@ This program is in compliance with the LBOEC2B project requirements.
 
 ## Installation
 
-This program is compatible with Windows and Linux
+This program is compatible with Windows and Linux. It is important to clone the entirety of the repository as the contents for the menu is located at the POS.data file
 
 ### Windows
 
