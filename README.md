@@ -10,14 +10,14 @@ This program is compatible with Windows and Linux. It is important to clone the 
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/kyaaan/pexam1
+   git clone https://github.com/kyaaan/pexam1.git
    ```
 2. Go to the Builds folder and run PracticalExam1.exe
 
 ### Linux
 1. Clone the repo
    ```sh
-   git clone https://github.com/kyaaan/pexam1
+   git clone https://github.com/kyaaan/pexam1.git
    ```
 2. Build the project using gcc
    ```sh
