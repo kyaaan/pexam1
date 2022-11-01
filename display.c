@@ -108,7 +108,11 @@ void displayReceipt(Products *item, int len, float total, float change, float pa
     printf("\t\t\tChange: %.2f\n", change);
 
     displayBorder(SCREEN_WIDTH,'_');
-    printf("\n");
+
+    //Adds a buffer to prevent application to exit immediately
+    printf("\n\n PRESS ANY KEY TO EXIT!");
+    getchar();
+    getchar();
 }
 
 void displayAddOns(Products *item) {
