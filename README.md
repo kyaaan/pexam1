@@ -4,7 +4,7 @@ This program is in compliance with the LBOEC2B project requirements.
 
 ## Installation
 
-This program is compatible with Windows and Linux. It is important to clone the entirety of the repository as the contents for the menu is located at the POS.data file
+This program is compatible with Windows and Linux. It is important to clone the entirety of the repository as the contents for the menu is located at the POS.data file.
 
 ### Windows
 
@@ -21,6 +21,7 @@ This program is compatible with Windows and Linux. It is important to clone the 
    ```
 2. Build the project using gcc
    ```sh
+   cd practical-exam-1
    gcc *.c -o ./Builds/main
    ```
 3. Run the project using the terminal
